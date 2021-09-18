@@ -1,1 +1,37 @@
 @import "./reset";
+@import "./variables";
+
+body {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+}
+
+.logo_wrapper {
+  img {
+    padding: 25px;
+    width: 150px;
+    height: auto;
+  }
+}
+.hero {
+  background: url("../images/hero-mobile.jpg") no-repeat;
+  height: 250px;
+}
+.content_wrapper {
+  text-align: center;
+  > div {
+    padding: 50px 25px;
+    > h1 {
+      color: $DarkGrayishRed;
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: 10px;
+      font-weight: map-get($fontWieght, "bold");
+      span {
+        font-weight: map-get($fontWieght, "normal");
+        color: $DesaturatedRed;
+      }
+    }
+  }
+}
