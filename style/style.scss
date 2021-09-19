@@ -4,6 +4,11 @@
 body {
   font-family: $fontFamily;
   font-size: $fontSize;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
 }
 
 .logo_wrapper {
@@ -20,18 +25,51 @@ body {
 .content_wrapper {
   text-align: center;
   > div {
-    padding: 50px 25px;
+    padding: 50px 10px;
     > h1 {
       color: $DarkGrayishRed;
       font-size: 2.8rem;
       text-transform: uppercase;
       line-height: 1;
       letter-spacing: 10px;
-      font-weight: map-get($fontWieght, "bold");
+      font-weight: map-get($fontWieght, "bolder");
       span {
         font-weight: map-get($fontWieght, "normal");
         color: $DesaturatedRed;
       }
+    }
+    > p {
+      margin: 25px 0;
+      font-weight: map-get($fontWieght, "bold");
+      color: $DesaturatedRed;
+      line-height: 1.5;
+    }
+  }
+}
+
+.email_input_wrapper {
+  input {
+    width: 90%;
+    padding: 15px;
+    border: 1px solid $DarkGrayishRedO;
+    border-radius: 25px;
+    color: $DarkGrayishRed;
+    outline: none;
+    &:focus {
+      border-color: $DesaturatedRed;
+    }
+  }
+  > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    padding: 13px 25px;
+    border-radius: 25px;
+    transform: translate(275px, -47px);
+    > .hidden {
+      display: none;
     }
   }
 }
