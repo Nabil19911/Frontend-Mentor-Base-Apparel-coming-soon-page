@@ -3,3 +3,23 @@
   margin: 0;
   padding: 0;
 }
+
+// Vertical mobile
+@mixin Vmobile {
+  @media only screen and (min-width: 665px) {
+    @content;
+  }
+}
+
+//  tablet
+@mixin table {
+  @media only screen and (min-width: 750px) {
+    @content;
+  }
+}
+//  windows
+@mixin windows {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}

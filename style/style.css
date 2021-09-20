@@ -12,15 +12,100 @@ body {
   background-image: linear-gradient(135deg, white, #fff5f5);
 }
 
+@media only screen and (min-width: 750px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 665px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+        grid-template-areas: "header header" "main content";
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  main {
+    text-align: center;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 890px 475px;
+        grid-template-columns: 890px 475px;
+        grid-template-areas: "header main" "content main";
+  }
+}
+
 .logo_wrapper img {
   padding: 25px;
   width: 150px;
   height: auto;
 }
 
+@media only screen and (min-width: 1280px) {
+  .logo_wrapper img {
+    padding: 4em 0 0 0;
+    margin-left: 15em;
+  }
+}
+
+@media only screen and (min-width: 665px) {
+  .logo_wrapper {
+    grid-area: header;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .logo_wrapper {
+    text-align: left;
+  }
+}
+
 .hero {
   background: url("../images/hero-mobile.jpg") no-repeat;
   height: 250px;
+}
+
+@media only screen and (min-width: 665px) {
+  .hero {
+    grid-area: main;
+    background: url("../images/hero-desktop.jpg") no-repeat;
+    width: 50vw;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .hero {
+    width: 50vw;
+    height: 50vh;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero {
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 100vh;
+  }
 }
 
 .content_wrapper {
@@ -45,6 +130,30 @@ body {
   color: #ce9797;
 }
 
+@media only screen and (min-width: 665px) {
+  .content_wrapper > div > h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .content_wrapper > div > h1 {
+    text-align: center;
+    margin: auto;
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .content_wrapper > div > h1 {
+    text-align: left;
+    width: 100%;
+    font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: 15px;
+  }
+}
+
 .content_wrapper > div > p {
   margin: 25px 0;
   font-weight: 400;
@@ -52,8 +161,31 @@ body {
   line-height: 1.5;
 }
 
+@media only screen and (min-width: 1280px) {
+  .content_wrapper > div {
+    padding: 0;
+    width: 65%;
+    margin: auto;
+    margin-left: 15em;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 665px) {
+  .content_wrapper {
+    width: 50vw;
+    padding: 0;
+    grid-area: "content";
+  }
+}
+
+.email_input_wrapper {
+  position: relative;
+}
+
 .email_input_wrapper input {
   width: 90%;
+  min-width: 320px;
   padding: 15px;
   border: 1px solid rgba(65, 58, 58, 0.301);
   border-radius: 25px;
@@ -63,6 +195,12 @@ body {
 
 .email_input_wrapper input:focus {
   border-color: #ce9797;
+}
+
+@media only screen and (min-width: 665px) {
+  .email_input_wrapper input {
+    min-width: 250px;
+  }
 }
 
 .email_input_wrapper > span {
@@ -75,12 +213,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 65px;
+  width: 75px;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   padding: 13px 25px;
   border-radius: 25px;
-  -webkit-transform: translate(275px, -47px);
-          transform: translate(275px, -47px);
+  position: absolute;
+  top: 1px;
+  right: 15px;
 }
 
 .email_input_wrapper > span > .hidden {
