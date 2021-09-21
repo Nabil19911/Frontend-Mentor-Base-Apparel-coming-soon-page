@@ -211,6 +211,7 @@ body {
   border-radius: 25px;
   color: #413a3a;
   outline: none;
+  background: transparent;
 }
 
 .email_input_wrapper input:focus {

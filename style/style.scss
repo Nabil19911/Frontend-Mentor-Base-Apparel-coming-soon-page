@@ -147,6 +147,7 @@ main {
     border-radius: 25px;
     color: $DarkGrayishRed;
     outline: none;
+    background: transparent;
     &:focus {
       border-color: $DesaturatedRed;
     }
