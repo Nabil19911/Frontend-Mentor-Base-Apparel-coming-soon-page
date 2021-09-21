@@ -118,7 +118,7 @@ main {
 .email_input_wrapper {
   position: relative;
   div {
-    // visibility: hidden;
+    visibility: hidden;
     position: absolute;
     background: white;
     filter: drop-shadow(0 0 0.2em black);
@@ -134,6 +134,9 @@ main {
       width: 20px;
       height: 20px;
       transform: rotate(45deg);
+    }
+    &.active {
+      visibility: visible;
     }
   }
   input {
@@ -154,6 +157,8 @@ main {
       background-image: url("../images/icon-error.svg");
       background-repeat: no-repeat;
       background-position: 15em;
+      background-color: red;
+      color: white;
       @include tablet {
         background-position: 22em;
       }

@@ -177,6 +177,7 @@ body {
 }
 
 .email_input_wrapper div {
+  visibility: hidden;
   position: absolute;
   background: white;
   -webkit-filter: drop-shadow(0 0 0.2em black);
@@ -196,6 +197,10 @@ body {
   height: 20px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.email_input_wrapper div.active {
+  visibility: visible;
 }
 
 .email_input_wrapper input {
@@ -222,6 +227,8 @@ body {
   background-image: url("../images/icon-error.svg");
   background-repeat: no-repeat;
   background-position: 15em;
+  background-color: red;
+  color: white;
 }
 
 @media only screen and (min-width: 750px) {
