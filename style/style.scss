@@ -9,6 +9,7 @@ body {
     hsl(0, 0%, 100%),
     hsl(0, 100%, 98%)
   );
+
   @include vertical-mobile {
     display: flex;
     justify-content: center;
@@ -105,8 +106,6 @@ main {
     @include laptop {
       width: 50%;
       margin: 5em auto 0 auto;
-    }
-    @include laptop {
       padding-left: 0;
     }
   }
@@ -119,7 +118,7 @@ main {
 .email_input_wrapper {
   position: relative;
   div {
-    visibility: hidden;
+    // visibility: hidden;
     position: absolute;
     background: white;
     filter: drop-shadow(0 0 0.2em black);
@@ -150,6 +149,17 @@ main {
     }
     @include vertical-mobile {
       min-width: 300px;
+    }
+    &.error {
+      background-image: url("../images/icon-error.svg");
+      background-repeat: no-repeat;
+      background-position: 15em;
+      @include tablet {
+        background-position: 22em;
+      }
+      @include laptop {
+        background-position: 25em;
+      }
     }
   }
   > button {
