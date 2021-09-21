@@ -56,8 +56,6 @@ Users should be able to:
 
 - Frontend Mentor - [@Nabil1991](https://www.frontendmentor.io/profile/Nabil19911)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
 ## Acknowledgments
 
 I thank myself
