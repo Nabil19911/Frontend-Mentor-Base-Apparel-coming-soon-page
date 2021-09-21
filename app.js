@@ -4,17 +4,18 @@ const input = document.querySelector("input");
 
 const validEmail = emailInput => {
   let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if (!emailInput.match(mailformat)) {
+  if (!emailInput.match(mailformat) || emailInput === "") {
     input.classList.add("error");
     error_message_div.classList.add("active");
+    return false;
   }
+  return true;
 };
 
 btn.addEventListener("click", () => {
   let userInput = input.value;
-  if (userInput === "") {
-    input.classList.add("error");
-    error_message_div.classList.add("active");
+  if (validEmail(userInput)) {
+    input.value = "";
   }
   validEmail(userInput);
 });
