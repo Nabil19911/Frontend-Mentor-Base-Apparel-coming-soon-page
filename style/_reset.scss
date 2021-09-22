@@ -29,3 +29,9 @@
     @content;
   }
 }
+//largeScreen
+@mixin largeScreen {
+  @media only screen and (min-width: 1440px) {
+    @content;
+  }
+}

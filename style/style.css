@@ -75,6 +75,13 @@ body {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .logo_wrapper {
+    margin-left: 10em;
+    margin-top: 80px;
+  }
+}
+
 .hero {
   background: url("../images/hero-mobile.jpg") no-repeat;
   height: 250px;
@@ -99,6 +106,12 @@ body {
 @media only screen and (min-width: 1280px) {
   .hero {
     padding: 19.2em 14em;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero {
+    padding: 28.2em 21em;
   }
 }
 
@@ -165,6 +178,13 @@ body {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .content_wrapper > div {
+    width: 58%;
+    margin: auto;
+  }
+}
+
 @media only screen and (min-width: 665px) {
   .content_wrapper {
     grid-area: main;
@@ -185,6 +205,7 @@ body {
   padding: 1em;
   bottom: 65px;
   left: 50px;
+  color: #f96262;
 }
 
 .email_input_wrapper div::after {
@@ -204,6 +225,7 @@ body {
 }
 
 .email_input_wrapper input {
+  position: relative;
   width: 90%;
   min-width: 320px;
   padding: 15px;
@@ -227,9 +249,9 @@ body {
 .email_input_wrapper input.error {
   background-image: url("../images/icon-error.svg");
   background-repeat: no-repeat;
-  background-position: 15em;
-  background-color: red;
-  color: white;
+  background-position: 70%;
+  color: #f96262;
+  border-color: #f96262;
 }
 
 @media only screen and (min-width: 750px) {
@@ -240,7 +262,7 @@ body {
 
 @media only screen and (min-width: 1280px) {
   .email_input_wrapper input.error {
-    background-position: 25em;
+    background-position: 23em;
   }
 }
 
@@ -261,7 +283,7 @@ body {
   border: none;
   position: absolute;
   top: 1px;
-  right: 15px;
+  right: 5%;
   -webkit-box-shadow: 0px 10px 30px -10px black;
           box-shadow: 0px 10px 30px -10px black;
 }
