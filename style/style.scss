@@ -68,9 +68,11 @@ main {
     padding: 25em 18em;
   }
   @include laptop {
+    background-size: cover;
     padding: 19.2em 14em;
   }
   @include largeScreen {
+    background-size: cover;
     padding: 28.2em 21em;
   }
 }

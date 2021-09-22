@@ -105,12 +105,14 @@ body {
 
 @media only screen and (min-width: 1280px) {
   .hero {
+    background-size: cover;
     padding: 19.2em 14em;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .hero {
+    background-size: cover;
     padding: 28.2em 21em;
   }
 }
